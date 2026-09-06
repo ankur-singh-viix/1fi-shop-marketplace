@@ -1,0 +1,150 @@
+[
+  {
+    "id": "iphone-17-pro-max",
+    "name": "iPhone 17 Pro Max",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "images": [
+      "/products/iphone-17-pro-max-1.svg",
+      "/products/iphone-17-pro-max-2.svg"
+    ],
+    "shortDescription": "Titanium design. A19 Pro chip. Pro camera system.",
+    "description": "The iPhone 17 Pro Max brings the most advanced camera system ever on iPhone, a stronger titanium frame, and the A19 Pro chip for pro-level performance that lasts. Built for the way you actually use your phone — all day, every day.",
+    "highlights": [
+      "6.9-inch Super Retina XDR display",
+      "Triple 48MP Pro camera system",
+      "A19 Pro chip with 6-core GPU",
+      "Up to 33 hours video playback"
+    ],
+    "rating": 4.8,
+    "reviewCount": 2140,
+    "variants": [
+      { "id": "iphone17pm-256-black", "label": "256GB · Black Titanium", "price": 164900, "inStock": true },
+      { "id": "iphone17pm-512-black", "label": "512GB · Black Titanium", "price": 194900, "inStock": true },
+      { "id": "iphone17pm-256-blue", "label": "256GB · Deep Blue", "price": 164900, "inStock": true },
+      { "id": "iphone17pm-1tb-black", "label": "1TB · Black Titanium", "price": 224900, "inStock": false }
+    ],
+    "emiTenureOptions": [3, 6, 9, 12, 18, 24]
+  },
+  {
+    "id": "iphone-17",
+    "name": "iPhone 17",
+    "brand": "Apple",
+    "category": "Smartphones",
+    "images": [
+      "/products/iphone-17-1.svg"
+    ],
+    "shortDescription": "All-new design. A19 chip. All-day battery.",
+    "description": "iPhone 17 features a redesigned aluminum unibody, a brighter always-on display, and the new A19 chip — fast enough for anything, efficient enough to last all day.",
+    "highlights": [
+      "6.3-inch Super Retina XDR display",
+      "Dual 48MP camera system",
+      "A19 chip",
+      "Up to 27 hours video playback"
+    ],
+    "rating": 4.7,
+    "reviewCount": 1568,
+    "variants": [
+      { "id": "iphone17-128-black", "label": "128GB · Black", "price": 79900, "inStock": true },
+      { "id": "iphone17-256-black", "label": "256GB · Black", "price": 89900, "inStock": true },
+      { "id": "iphone17-128-lavender", "label": "128GB · Lavender", "price": 79900, "inStock": true }
+    ],
+    "emiTenureOptions": [3, 6, 9, 12, 18]
+  },
+  {
+    "id": "galaxy-s25-ultra",
+    "name": "Galaxy S25 Ultra",
+    "brand": "Samsung",
+    "category": "Smartphones",
+    "images": [
+      "/products/galaxy-s25-ultra-1.svg"
+    ],
+    "shortDescription": "Galaxy AI. Snapdragon 8 Elite. Built-in S Pen.",
+    "description": "Galaxy S25 Ultra pairs a titanium frame with the most capable Galaxy AI yet, a 200MP main camera, and a built-in S Pen for the moments a finger just won't do.",
+    "highlights": [
+      "6.9-inch Dynamic AMOLED 2X display",
+      "200MP wide camera with AI zoom",
+      "Snapdragon 8 Elite for Galaxy",
+      "Built-in S Pen"
+    ],
+    "rating": 4.6,
+    "reviewCount": 987,
+    "variants": [
+      { "id": "s25u-256-gray", "label": "256GB · Titanium Gray", "price": 129999, "inStock": true },
+      { "id": "s25u-512-black", "label": "512GB · Titanium Black", "price": 144999, "inStock": true }
+    ],
+    "emiTenureOptions": [3, 6, 12, 18, 24]
+  },
+  {
+    "id": "oneplus-15",
+    "name": "OnePlus 15",
+    "brand": "OnePlus",
+    "category": "Smartphones",
+    "images": [
+      "/products/oneplus-15-1.svg"
+    ],
+    "shortDescription": "Snapdragon 8 Elite Gen 2. 120Hz ProXDR display.",
+    "description": "OnePlus 15 is built for speed — from the Snapdragon 8 Elite Gen 2 under the hood to 100W SuperVOOC charging that gets you back up in minutes, not hours.",
+    "highlights": [
+      "6.8-inch 120Hz ProXDR display",
+      "Snapdragon 8 Elite Gen 2",
+      "100W SuperVOOC fast charging",
+      "Hasselblad camera system"
+    ],
+    "rating": 4.5,
+    "reviewCount": 612,
+    "variants": [
+      { "id": "op15-256-black", "label": "256GB · Sand Black", "price": 64999, "inStock": true },
+      { "id": "op15-512-green", "label": "512GB · Emerald Green", "price": 71999, "inStock": true }
+    ],
+    "emiTenureOptions": [3, 6, 9, 12]
+  },
+  {
+    "id": "macbook-pro-14",
+    "name": "MacBook Pro 14\u2033",
+    "brand": "Apple",
+    "category": "Laptops",
+    "images": [
+      "/products/macbook-pro-14-1.svg"
+    ],
+    "shortDescription": "M5 Pro chip. Liquid Retina XDR display.",
+    "description": "MacBook Pro with the M5 Pro chip handles pro workflows without breaking a sweat, with a stunning Liquid Retina XDR display and all-day battery life.",
+    "highlights": [
+      "14.2-inch Liquid Retina XDR display",
+      "Apple M5 Pro chip, 14-core CPU",
+      "Up to 22 hours battery life",
+      "1080p FaceTime HD camera"
+    ],
+    "rating": 4.9,
+    "reviewCount": 843,
+    "variants": [
+      { "id": "mbp14-512-silver", "label": "512GB · Silver", "price": 199900, "inStock": true },
+      { "id": "mbp14-1tb-space", "label": "1TB · Space Black", "price": 229900, "inStock": true }
+    ],
+    "emiTenureOptions": [6, 12, 18, 24, 36]
+  },
+  {
+    "id": "pixel-10-pro",
+    "name": "Pixel 10 Pro",
+    "brand": "Google",
+    "category": "Smartphones",
+    "images": [
+      "/products/pixel-10-pro-1.svg"
+    ],
+    "shortDescription": "Google Tensor G5. Best-in-class computational photography.",
+    "description": "Pixel 10 Pro brings the smartest version of Google's camera and AI experience to a refined titanium-and-glass design, with a display that's easy to see even in bright sun.",
+    "highlights": [
+      "6.8-inch Super Actua LTPO display",
+      "Google Tensor G5",
+      "50MP triple rear camera",
+      "7 years of OS updates"
+    ],
+    "rating": 4.6,
+    "reviewCount": 421,
+    "variants": [
+      { "id": "p10p-128-obsidian", "label": "128GB · Obsidian", "price": 109999, "inStock": true },
+      { "id": "p10p-256-porcelain", "label": "256GB · Porcelain", "price": 119999, "inStock": false }
+    ],
+    "emiTenureOptions": [3, 6, 12, 18]
+  }
+]
