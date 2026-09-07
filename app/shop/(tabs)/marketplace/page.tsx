@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { fetchProductList } from "@/lib/api/marketplace";
 import { ProductListItem } from "@/lib/types/marketplace";
 import { ProductCard, ProductCardSkeleton } from "@/components/shop/ProductCard";
@@ -9,17 +10,17 @@ import { ErrorState } from "@/components/ui/ErrorState";
 type LoadState = "loading" | "error" | "ready";
 
 export default function MarketplacePage() {
+  const searchParams = useSearchParams();
+  const query = searchParams.get("q")?.trim().toLowerCase() ?? "";
+
   const [products, setProducts] = useState<ProductListItem[]>([]);
   const [state, setState] = useState<LoadState>("loading");
   const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
   const load = useCallback(async () => {
-    console.log("STEP 1: load() called");
     setState("loading");
     try {
-      console.log("STEP 2: about to call fetchProductList");
       const data = await fetchProductList();
-      console.log("STEP 3: got data back", data);
       setProducts(data);
       setState("ready");
     } catch (err) {
@@ -31,6 +32,14 @@ export default function MarketplacePage() {
   useEffect(() => {
     load();
   }, [load]);
+
+  const filteredProducts = useMemo(() => {
+    if (!query) return products;
+    return products.filter(
+      (p) =>
+        p.name.toLowerCase().includes(query) || p.brand.toLowerCase().includes(query)
+    );
+  }, [products, query]);
 
   return (
     <div className="px-4 py-4">
@@ -51,15 +60,15 @@ export default function MarketplacePage() {
 
       {state === "error" && <ErrorState message={errorMessage} onRetry={load} />}
 
-      {state === "ready" && products.length === 0 && (
+      {state === "ready" && filteredProducts.length === 0 && (
         <div className="py-16 text-center text-[13px] text-ink-muted">
-          No products available right now.
+          {query ? `No products match "${query}".` : "No products available right now."}
         </div>
       )}
 
-      {state === "ready" && products.length > 0 && (
+      {state === "ready" && filteredProducts.length > 0 && (
         <div className="grid grid-cols-2 gap-3">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

@@ -1,6 +1,7 @@
 import { AppHeader } from "@/components/ui/AppHeader";
 import { ShopTabs } from "@/components/shop/ShopTabs";
 import { PromoBanner } from "@/components/shop/PromoBanner";
+import { SearchBar } from "@/components/shop/SearchBar";
 
 export default function ShopTabsLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -8,6 +9,7 @@ export default function ShopTabsLayout({ children }: { children: React.ReactNode
       <AppHeader title="Shop" />
       <PromoBanner />
       <ShopTabs />
+      <SearchBar />
       <main className="flex-1">{children}</main>
     </div>
   );
