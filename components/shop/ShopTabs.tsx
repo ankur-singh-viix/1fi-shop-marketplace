@@ -13,24 +13,25 @@ export function ShopTabs() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-[57px] z-10 flex gap-1 border-b border-border bg-surface px-3 pt-1">
-      {TABS.map((tab) => {
-        const isActive = pathname?.startsWith(tab.href);
-        return (
-          <Link
-            key={tab.href}
-            href={tab.href}
-            className={`relative px-3 py-3 text-[13.5px] font-medium transition-colors ${
-              isActive ? "text-brand" : "text-ink-muted hover:text-ink"
-            }`}
-          >
-            {tab.label}
-            {isActive && (
-              <span className="absolute inset-x-3 -bottom-px h-[2.5px] rounded-full bg-brand" />
-            )}
-          </Link>
-        );
-      })}
-    </nav>
+    <div className="sticky top-[57px] z-10 border-b border-border bg-surface px-4 py-3">
+      <div className="flex gap-1 rounded-full bg-brand-light p-1">
+        {TABS.map((tab) => {
+          const isActive = pathname?.startsWith(tab.href);
+          return (
+            <Link
+              key={tab.href}
+              href={tab.href}
+              className={`flex-1 rounded-full px-2 py-2 text-center text-[12.5px] font-semibold transition-colors ${
+                isActive
+                  ? "bg-surface text-brand shadow-sm"
+                  : "text-ink-muted hover:text-ink"
+              }`}
+            >
+              {tab.label}
+            </Link>
+          );
+        })}
+      </div>
+    </div>
   );
 }
