@@ -5,7 +5,7 @@
     "brand": "Apple",
     "category": "Smartphones",
     "images": [
-      "/products/iphone-17-pro-max-1.svg",
+      "/products/17 pro max.jpg",
       "/products/iphone-17-pro-max-2.svg"
     ],
     "shortDescription": "Titanium design. A19 Pro chip. Pro camera system.",
@@ -32,7 +32,7 @@
     "brand": "Apple",
     "category": "Smartphones",
     "images": [
-      "/products/iphone-17-1.svg"
+      "/products/17.jpg"
     ],
     "shortDescription": "All-new design. A19 chip. All-day battery.",
     "description": "iPhone 17 features a redesigned aluminum unibody, a brighter always-on display, and the new A19 chip — fast enough for anything, efficient enough to last all day.",
@@ -57,7 +57,7 @@
     "brand": "Samsung",
     "category": "Smartphones",
     "images": [
-      "/products/galaxy-s25-ultra-1.svg"
+      "/products/s25-ultra.jpg"
     ],
     "shortDescription": "Galaxy AI. Snapdragon 8 Elite. Built-in S Pen.",
     "description": "Galaxy S25 Ultra pairs a titanium frame with the most capable Galaxy AI yet, a 200MP main camera, and a built-in S Pen for the moments a finger just won't do.",
@@ -81,7 +81,7 @@
     "brand": "OnePlus",
     "category": "Smartphones",
     "images": [
-      "/products/oneplus-15-1.svg"
+      "/products/oneplus-15.jpg"
     ],
     "shortDescription": "Snapdragon 8 Elite Gen 2. 120Hz ProXDR display.",
     "description": "OnePlus 15 is built for speed — from the Snapdragon 8 Elite Gen 2 under the hood to 100W SuperVOOC charging that gets you back up in minutes, not hours.",
@@ -105,7 +105,7 @@
     "brand": "Apple",
     "category": "Laptops",
     "images": [
-      "/products/macbook-pro-14-1.svg"
+      "/products/mackbook-pro-14.jpg"
     ],
     "shortDescription": "M5 Pro chip. Liquid Retina XDR display.",
     "description": "MacBook Pro with the M5 Pro chip handles pro workflows without breaking a sweat, with a stunning Liquid Retina XDR display and all-day battery life.",
@@ -129,7 +129,7 @@
     "brand": "Google",
     "category": "Smartphones",
     "images": [
-      "/products/pixel-10-pro-1.svg"
+      "/products/pixel.jpg"
     ],
     "shortDescription": "Google Tensor G5. Best-in-class computational photography.",
     "description": "Pixel 10 Pro brings the smartest version of Google's camera and AI experience to a refined titanium-and-glass design, with a display that's easy to see even in bright sun.",
