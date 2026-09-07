@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { AppHeader } from "@/components/ui/AppHeader";
 import { ShopTabs } from "@/components/shop/ShopTabs";
 import { PromoBanner } from "@/components/shop/PromoBanner";
@@ -9,7 +10,9 @@ export default function ShopTabsLayout({ children }: { children: React.ReactNode
       <AppHeader title="Shop" />
       <PromoBanner />
       <ShopTabs />
-      <SearchBar />
+      <Suspense fallback={<div className="h-[52px]" />}>
+        <SearchBar />
+      </Suspense>
       <main className="flex-1">{children}</main>
     </div>
   );

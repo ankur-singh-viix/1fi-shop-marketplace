@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { fetchProductList } from "@/lib/api/marketplace";
 import { ProductListItem } from "@/lib/types/marketplace";
@@ -9,7 +9,7 @@ import { ErrorState } from "@/components/ui/ErrorState";
 
 type LoadState = "loading" | "error" | "ready";
 
-export default function MarketplacePage() {
+function MarketplaceContent() {
   const searchParams = useSearchParams();
   const query = searchParams.get("q")?.trim().toLowerCase() ?? "";
 
@@ -74,5 +74,21 @@ export default function MarketplacePage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function MarketplacePage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="grid grid-cols-2 gap-3 px-4 py-4">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <ProductCardSkeleton key={i} />
+          ))}
+        </div>
+      }
+    >
+      <MarketplaceContent />
+    </Suspense>
   );
 }
