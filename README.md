@@ -4,7 +4,7 @@ A demo implementation of the **1Fi Marketplace** section on the Shop page, built
 
 ## What this is
 
-1Fi is a LAMF-based (Loan Against Mutual Funds) shopping platform — users shop for products on no-cost EMI, backed by pledging mutual fund units instead of selling them. This project adds a fully-designed **1Fi Marketplace** section to the Shop page, alongside two blank placeholder tabs (**Top Brands**, **Nearby Stores**) as specified in the assignment.
+1Fi is a LAMF-based (Loan Against Mutual Funds) shopping platform — users shop for products on no-cost EMI, backed by pledging mutual fund units instead of selling them. This project adds a fully-designed **1Fi Marketplace** section to the Shop page, alongside two blank placeholder tabs (**Top Brands**, **Nearby Stores**) as specified in the assignment. The Shop page's shell (promo banner, tab style, search bar) was rebuilt to visually match the real 1Fi app, based on screenshots of the live product.
 
 ## Stack
 
@@ -17,22 +17,23 @@ app/
 shop/
 layout.tsx → outer Shop wrapper
 page.tsx → redirects to /shop/marketplace
-(tabs)/ → route group: shares header + tab bar
+(tabs)/ → route group: shares header, banner, tabs, search
 layout.tsx
 top-brands/page.tsx → blank, per assignment spec
 nearby-stores/page.tsx → blank, per assignment spec
-marketplace/page.tsx → product listing
+marketplace/page.tsx → product listing (filterable by search)
 marketplace/[productId]/
 page.tsx → product detail + EMI selection (own header, no tab bar)
 components/
 ui/ → AppHeader, EmptyState, ErrorState — shared across the app
-shop/ → ShopTabs, ProductCard, VariantSelector, EmiPlanSelector — marketplace-specific
+shop/ → ShopTabs, PromoBanner, SearchBar, ProductCard, VariantSelector, EmiPlanSelector
 lib/
 types/ → Product, ProductVariant, EmiPlan, ProductListItem
 utils/emi.ts → EMI calculation (reducing-balance formula) + INR formatting
 api/ → mock API layer (fetchProductList, fetchProductById)
 data/
 products.json → mock product catalog
+public/products/ → product images
 
 
 ## Data & API approach
@@ -46,19 +47,21 @@ Per the assignment's requirement to avoid hardcoding data into components, all p
 
 ## Features implemented
 
+- Shop page shell matching the real 1Fi app: purple promo banner, pill-style segmented tabs, search bar
 - Shop page with 3 tabs: Top Brands (blank), Nearby Stores (blank), 1Fi Marketplace (full)
-- Product listing grid: image, name, brand, starting price, EMI teaser, loading skeletons, error/retry state
+- Functional search — filters the Marketplace grid live by product name or brand, synced to the URL (`?q=`)
+- Product listing grid: real product images, name, brand, starting price, EMI teaser, loading skeletons, error/retry state
 - Product detail page: images, rating, description, highlights, variant selection, EMI plan selection with live recalculation, sticky CTA that's disabled until a plan is chosen
 - Empty, loading, and error states throughout — not just the happy path
 - Mobile-first responsive layout, styled to match 1Fi's existing purple brand identity (`#6C28D9`)
 
 ## What I'd do with more time
 
-- Wire up real product images instead of generated placeholders
 - Add a proper eligibility-check flow after "Proceed" (currently a simulated confirmation)
 - Persist selected variant/plan in the URL so links are shareable
 - Add unit tests for the EMI calculation utility
 - Replace the mock API with real endpoints once available
+- Add debounced search-as-you-type analytics if this were a real product
 
 ## Running locally
 
